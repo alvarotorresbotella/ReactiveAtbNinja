@@ -36,7 +36,7 @@ public class ReactorAtbApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 	
-		//Booramos el contenino de la collection 
+		//Borramos el contenino de la collection 
 		mongoTemplate.dropCollection("fluxdata").subscribe();
 		
 		//Creación de flujo mediante el método just
