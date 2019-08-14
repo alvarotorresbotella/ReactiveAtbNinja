@@ -12,5 +12,11 @@ public class ReactorAtbApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
+	
+	@Test
+	public void test()
+	{
+		ReactorAtbApplication.main(new String[] {"test.property"});
+	}
 
 }
