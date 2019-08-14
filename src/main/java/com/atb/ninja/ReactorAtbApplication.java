@@ -30,7 +30,7 @@ public class ReactorAtbApplication implements CommandLineRunner{
 	private ReactiveMongoTemplate mongoTemplate;
 	
 	public static void main(String[] args) {
-		SpringApplication.run(ReactorAtbApplication.class, args);
+		SpringApplication.run(ReactorAtbApplication.class);
 	}
 
 	@Override
