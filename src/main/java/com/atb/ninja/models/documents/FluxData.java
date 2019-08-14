@@ -9,8 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="fluxdata")
 public class FluxData {
-	
-	private static final Logger log=LoggerFactory.getLogger(FluxData.class);
+
 	
 	@Id
 	private String data;
