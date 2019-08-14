@@ -13,7 +13,7 @@ import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 public class ReactorAtbApplicationTests {
 
 	@Test
-	@PrepareForTest(ReactorAtbApplication.class)
+	@PrepareForTest(SpringApplication.class)
 	 public void main() {
         mockStatic(SpringApplication.class);
         ReactorAtbApplication.main(new String[]{"test"});
