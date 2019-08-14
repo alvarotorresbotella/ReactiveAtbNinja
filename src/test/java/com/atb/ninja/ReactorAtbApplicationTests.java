@@ -16,9 +16,9 @@ public class ReactorAtbApplicationTests {
 	@PrepareForTest(SpringApplication.class)
 	 public void main() {
         mockStatic(SpringApplication.class);
-        ReactorAtbApplication.main(new String[]{"test"});
+        ReactorAtbApplication.main(new String[0]);
         verifyStatic(SpringApplication.class);
-        SpringApplication.run(ReactorAtbApplication.class, new String[]{"test"});
+        SpringApplication.run(ReactorAtbApplication.class, new String[0]);
     }
 
 }
