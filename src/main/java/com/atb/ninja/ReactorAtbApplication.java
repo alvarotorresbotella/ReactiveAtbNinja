@@ -80,9 +80,10 @@ public class ReactorAtbApplication implements CommandLineRunner{
 		//Subscripción del flujo con implementación loging ok,error y runnable		 
 		mergeFlux.subscribe( block -> log.info(block.toString()),
 				               error -> log.error(error.getMessage()),
-				               new Runnable() {public void run() {
-											log.info("Flux merged, inyected in mongo and susribed....");
-										}
+				               new Runnable() {
+				            	   public void run() {
+										    log.info("Flux merged, inyected in mongo and susribed....");
+				            	   		}
 									}
 				 ); 				
 	}
