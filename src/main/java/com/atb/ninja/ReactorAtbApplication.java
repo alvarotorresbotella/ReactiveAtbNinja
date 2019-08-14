@@ -47,7 +47,7 @@ public class ReactorAtbApplication implements CommandLineRunner{
 				  );
 		
 		//Creación de flujo a partir de un iterable
-		List<FluxData> listDatas=new ArrayList<FluxData>();
+		List<FluxData> listDatas=new ArrayList<>();
         listDatas.add(new FluxData("DataFromFluxList1"));
         listDatas.add(new FluxData("DataFromFluxList2"));
         listDatas.add(new FluxData("DataFromFluxList3")); 
@@ -84,8 +84,6 @@ public class ReactorAtbApplication implements CommandLineRunner{
 											log.info("Flux merged, inyected in mongo and susribed....");
 										}
 									}
-				 ); 
-				
-				
+				 ); 				
 	}
 }
