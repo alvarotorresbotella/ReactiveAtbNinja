@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.atb.ninja</groupId>
-	<artifactId>ReactorAtb</artifactId>
+	<artifactId>ReactiveAtbNinja</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ReactorAtb</name>
+	<name>ReactiveAtbNinja</name>
 	<description>Demo project for Spring Boot</description>
 
 	 <properties>
@@ -53,10 +53,10 @@
 			      <scope>test</scope>
     		</dependency>
     		<dependency>
-		    <groupId>org.powermock</groupId>
-		    <artifactId>powermock-core</artifactId>
-		    <version>2.0.2</version>
-		    <scope>test</scope>
+			    <groupId>org.powermock</groupId>
+			    <artifactId>powermock-core</artifactId>
+			    <version>2.0.2</version>
+			    <scope>test</scope>
 			</dependency>
 			<dependency>
 			    <groupId>org.powermock</groupId>
@@ -84,21 +84,26 @@
 		          <artifactId>maven-surefire-plugin</artifactId>
 		          <version>2.18.1</version>
 		       </plugin>
-	       	   <plugin>
-		          <groupId>org.jacoco</groupId>
-		          <artifactId>jacoco-maven-plugin</artifactId>
-		          <version>0.7.9</version>
-		          <executions>
-		          <execution>
-		             <goals>
-		                     <goal>prepare-agent</goal>
-		             </goals>
-		              </execution>
-		         </executions>
-		         <configuration>
-		         <destFile>${sonar.jacoco.reportPath}</destFile>
-		         </configuration>
-	       </plugin>
+	       	  <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.0</version>
+            <executions>
+                <execution>
+                    <id>default-prepare-agent</id>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>default-report</id>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
 		</plugins>
 	</build>
 
